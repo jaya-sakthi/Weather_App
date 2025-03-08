@@ -1,0 +1,108 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.side-panel {
+    width: 220px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 500px;
+}
+
+#weather-visual {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+input, button, select {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e68900;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.loading {
+    display: none;
+    font-size: 14px;
+    color: #ff9800;
+    margin-top: 10px;
+}
+
+/* Weather Alert Link Styling */
+#weather-alerts-info a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#weather-alerts-info a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90vw; 
+        max-width: 1200px; 
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap; /* Allow elements to move down if space is tight */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .widget, .weather-item {
+        min-width: 400px; /* Prevent shrinking */
+        max-width: 90vw;  /* Keep it responsive */
+        width: 100%; 
+    }
+    
+
+    #map {
+        width: 100%; 
+        height: auto;
+    }
+
+    /* If scrolling is an issue */
+    html, body {
+        overflow-x: auto; /* Allow side-scrolling if necessary */
+    }
+    
+}

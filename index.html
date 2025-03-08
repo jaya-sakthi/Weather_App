@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Live Weather</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="side-panel" id="forecast-panel">
+            <h3>5-Day Forecast</h3>
+            <div id="forecast-info"></div>
+        </div>
+        <div class="main-content">
+            <h1>Live Weather</h1>
+            <input type="text" id="city" placeholder="Enter city name">
+            <select id="language" onchange="getWeather()">
+                <option value="en" selected>English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+            </select>
+            <button onclick="getWeather()">Get Weather</button>
+            <p class="loading" id="loading">Fetching weather data...</p>
+            <div id="weather-info"></div>
+            <h3>Weather Visualization</h3>
+            <div id="weather-visual"></div>
+        </div>
+        <div class="side-panel" id="weather-alerts-panel">
+            <h3>Weather Alerts</h3>
+            <div id="weather-alerts-info"></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
