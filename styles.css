@@ -64,7 +64,6 @@ button:hover {
     margin-top: 10px;
 }
 
-/* Weather Alert Link Styling */
 #weather-alerts-info a {
     color: yellow;
     text-decoration: none;
@@ -82,15 +81,15 @@ button:hover {
         max-width: 1200px; 
         margin: auto;
         display: flex;
-        flex-wrap: wrap; /* Allow elements to move down if space is tight */
+        flex-wrap: wrap; 
         justify-content: center;
         align-items: center;
     }
     
     
     .widget, .weather-item {
-        min-width: 400px; /* Prevent shrinking */
-        max-width: 90vw;  /* Keep it responsive */
+        min-width: 400px;
+        max-width: 90vw;  
         width: 100%; 
     }
     
@@ -100,9 +99,8 @@ button:hover {
         height: auto;
     }
 
-    /* If scrolling is an issue */
     html, body {
-        overflow-x: auto; /* Allow side-scrolling if necessary */
+        overflow-x: auto; 
     }
     
 }
